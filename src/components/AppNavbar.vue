@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import Logo from '../assets/logo.png';
 </script>
 
 <template>
@@ -8,11 +9,7 @@ import { RouterLink } from 'vue-router';
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <img
-              class="w-8 h-8"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-              alt="Workflow"
-            />
+            <img class="w-8 h-8" :src="Logo" alt="Workflow" />
           </div>
           <div class="md:block">
             <div class="flex items-baseline ml-10 space-x-4">
@@ -23,7 +20,13 @@ import { RouterLink } from 'vue-router';
                 to="/calculator"
                 exact-active-class="active"
                 class="text-white"
-                >About</RouterLink
+                >Calculator</RouterLink
+              >
+              <RouterLink
+                to="/todolist"
+                exact-active-class="active"
+                class="text-white"
+                >Todolist</RouterLink
               >
             </div>
           </div>
